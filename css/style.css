@@ -1,0 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside,
+section {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  font-family: "Silkscreen";
+  font-style: normal;
+  font-weight: normal;
+  color: #000;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: "Silkscreen";
+  background: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  font-family: "Silkscreen";
+}
+
+:root {
+  --volume_x: 0px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.image {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.08)), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.06)), to(rgba(255, 255, 255, 0.06)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06));
+  padding: 40px 52px;
+  border-radius: 40.19px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: relative;
+  background-clip: padding-box;
+  border: 4px solid transparent;
+  -webkit-transform: rotate(16deg);
+          transform: rotate(16deg);
+}
+
+.image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.08)), to(rgba(255, 255, 255, 0.12)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.12) 100%);
+  border-radius: inherit;
+  z-index: -1;
+  margin: -4px;
+}
+
+.image::after {
+  content: "";
+  top: -62%;
+  left: 14%;
+  z-index: -2;
+  position: absolute;
+  width: 195px;
+  height: 195px;
+  background: radial-gradient(123.33% 119.24% at 43.19% 99.41%, #1e0035 0%, #2d0951 26.04%, #6b0c71 100%);
+  -webkit-filter: blur(18px);
+          filter: blur(18px);
+  border-radius: 97.7689px;
+  -webkit-transform: rotate(-120deg);
+          transform: rotate(-120deg);
+}
+
+.div {
+  background: purple;
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  z-index: -2;
+  top: 50%;
+}
