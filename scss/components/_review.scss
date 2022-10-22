@@ -1,8 +1,10 @@
 .review {
+	margin-bottom: 130px;
 	&__inner {
 	}
 
 	&__title {
+		margin-bottom: 92px;
 	}
 
 	&__slider {
@@ -12,15 +14,29 @@
 	}
 
 	&__item {
+		background: #740693;
+		border-radius: 10px;
+		max-width: 537px;
+		padding: 50px;
 	}
 
 	&__text {
+		font-weight: 500;
+		font-size: 28px;
+		line-height: 32px;
+		letter-spacing: 0.4px;
+		color: var(--main-white);
+		margin-bottom: 33px;
 	}
 
 	&__desc {
+		display: flex;
+		align-items: center;
+		gap: 10px;
 	}
 
 	&__image {
+		max-width: 50px;
 	}
 
 	&__position {
