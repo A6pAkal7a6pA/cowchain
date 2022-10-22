@@ -1,26 +1,45 @@
 .header {
-
+	background: #151515;
+	height: 60px;
+	position: fixed;
+	z-index: 2;
+	width: 100%;
 	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	&__menu {
 	}
 
 	&__list {
+		display: flex;
+		align-items: center;
+		gap: 40px;
 	}
 
 	&__item {
 	}
 
 	&__link {
+		font-family: $fontfamilyJBMono;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 52px;
 	}
 	.logo {
-
+		display: flex;
+		align-items: center;
+		gap: 10px;
 		&__image {
+			max-height: 34px;
 		}
-	
+
 		&__text {
+			font-style: normal;
+			font-size: 22px;
+			line-height: 28px;
 		}
 	}
 }
-

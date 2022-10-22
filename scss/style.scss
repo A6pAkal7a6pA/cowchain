@@ -1,12 +1,44 @@
 @import "./config/nullable.scss";
-html {
-	height: 100%;
+@import "./components/_header.scss";
+@import "./components/_main.scss";
+@import "./components/_service.scss";
+@import "./components/_case.scss";
+@import "./components/_tech.scss";
+@import "./components/_team.scss";
+@import "./components/_review.scss";
+@import "./components/_footer.scss";
+
+html,
+body {
+	width: 100%;
 }
 body {
 	background-color: #000;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 100%;
 }
-.title {}
+.wrapper {
+	width: 100%;
+	position: relative;
+	min-height: 100vh;
+}
+.container {
+	max-width: 1330px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+.logo {
+	font-weight: 800;
+	color: #ffffff;
+}
+.title {
+	font-family: $fontfamilyJBMono;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 45px;
+	line-height: 52px;
+	text-align: center;
+	color: #ffffff;
+}

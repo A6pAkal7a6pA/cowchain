@@ -1,20 +1,40 @@
 .service {
-
+	padding-top: 100px;
+	background: linear-gradient(180deg, rgba(68, 7, 85, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
+	margin-bottom: 190px;
 	&__inner {
 	}
 
 	&__title {
+		margin-bottom: 78px;
 	}
 
 	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 38px 18px;
 	}
 
 	&__item {
+		flex: 0 0 244px;
+		width: 100%;
 	}
 
 	&__image {
+		width: 70px;
+		height: 70px;
+		margin-bottom: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
 	}
 
 	&__text {
+		font-weight: 800;
+		font-size: 22px;
+		line-height: 28px;
+		color: var(--main-white);
 	}
 }

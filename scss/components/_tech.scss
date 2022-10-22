@@ -3,27 +3,57 @@
 	}
 
 	&__title {
+		margin-bottom: 105px;
 	}
 
 	&__cards {
+		display: flex;
+		align-items: center;
+		gap: 20px;
 	}
 	&-card {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 25px;
 		&__head {
+			display: flex;
+			align-items: center;
+			gap: 18px;
 		}
 
 		&__image {
 		}
 
 		&__title {
+			font-family: $fontfamilyJBMono;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 28px;
+			line-height: 36px;
+			color: var(--main-purple);
 		}
 
 		&__tags {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			flex: 0 1 auto;
+			gap: 8px 20px;
 		}
 
 		&__tag {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 20px;
+			letter-spacing: 0.1px;
 		}
 
 		&__desc {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 24px;
+			letter-spacing: 0.5px;
 		}
 	}
 }
