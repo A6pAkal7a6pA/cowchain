@@ -2,6 +2,8 @@
 @import "./components/_header.scss";
 @import "./components/_main.scss";
 @import "./components/_service.scss";
+@import "./components/_cases.scss";
+@import "./components/_breadcrump.scss";
 @import "./components/_case.scss";
 @import "./components/_tech.scss";
 @import "./components/_team.scss";
@@ -27,8 +29,17 @@ body {
 	max-width: 1330px;
 	padding-left: 15px;
 	padding-right: 15px;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	&_mini {
+		max-width: 890px;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
+
 .logo {
 	font-weight: 800;
 	color: #ffffff;
@@ -41,4 +52,13 @@ body {
 	line-height: 52px;
 	text-align: center;
 	color: #ffffff;
+}
+.cases {
+	padding-top: 130px;
+}
+.main-wrapper {
+	background: url('../../img/main_bg.svg') top / cover no-repeat;
+}
+.case-wrapper {
+	background: url('../../img/case-wrapper.svg') bottom / cover no-repeat;
 }

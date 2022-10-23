@@ -1,42 +1,98 @@
 .case {
-	margin-bottom: 130px;
 	&__inner {
 	}
 
-	&__head {
+	&__title {
+		font-family: $fontfamilyJBMono;
+		font-weight: 500;
+		font-size: 36px;
+		line-height: 40px;
+		color: var(--main-purple);
+		margin-bottom: 44px;
+	}
+
+	&-stack {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		margin-bottom: 44px;
+		&__title {
+			font-weight: 400;
+			font-size: 22px;
+			line-height: 28px;
+			color: var(--main-white);
+		}
+
+		&__text {
+			font-weight: 700;
+			font-size: 22px;
+			line-height: 28px;
+			color: var(--main-white);
+		}
+	}
+
+	&__demo {
+		width: 100%;
+		margin-bottom: 20px;
+		img {
+			max-width: 100%;
+			width: 100%;
+			max-height: 306px;
+			object-fit: cover;
+			border-radius: 10px;
+		}
+	}
+
+	&__subtext {
+		margin-bottom: 20px;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 24px;
+		letter-spacing: 0.5px;
+		color: var(--main-white);
+	}
+	&__text {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin-bottom: 70px;
+		p {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 24px;
+			letter-spacing: 0.5px;
+			color: var(--main-white);
+		}
+	}
+
+	&__images {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-bottom: 45px;
+		margin-bottom: 20px;
 	}
 
-	&__title {
+	&__image {
+		img {
+			max-width: 100%;
+			object-fit: cover;
+			width: 100%;
+		}
 	}
 
-	&__show {
-		font-family: $fontfamilyJBMono;
-		font-weight: 400;
-		font-size: 32px;
-		line-height: 40px;
-		color: var(--main-purple);
-	}
+	&-navigation {
+		&__inner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 20px;
+		}
 
-	&__content {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		gap: 17px 20px;
-	}
-	&-item {
-		display: flex;
-		align-items: stretch;
-		max-width: 420px;
-		&__body {
+		&__item {
 			padding: 30px;
 			display: flex;
 			flex-direction: column;
 			gap: 25px;
-			height: 100%;
 			background: radial-gradient(
 				130.67% 126.29% at 111.47% -8.76%,
 				rgba(23, 6, 28, 0.32) 0%,
@@ -49,11 +105,10 @@
 		&__title {
 			font-family: $fontfamilyJBMono;
 			font-weight: 400;
-			font-size: 36px;
+			font-size: 32px;
 			line-height: 40px;
-			color: var(--main-purple);
+			color: #c736ef;
 		}
-
 		&__tags {
 			display: flex;
 			align-items: center;
@@ -74,32 +129,48 @@
 			font-size: 18px;
 			line-height: 24px;
 			letter-spacing: 0.5px;
-			flex-grow: 1;
-			flex-shrink: 0;
+			color: var(--main-white);
+			max-height: 72px;
+			text-overflow: ellipsis;
+			overflow: hidden;
 		}
 
 		&__button {
 			font-weight: 600;
 			font-size: 18px;
 			line-height: 26px;
+			color: var(--main-white);
+			background: linear-gradient(264.17deg, #7c06d8 1.95%, #9c07c6 101.96%);
 			border-radius: 8px;
 			padding: 13px 16px;
-			color: var(--main-white);
-			width: auto;
-			max-width: 200px;
-			border: 3px solid var(--main-purple);
-		}
 
-		&__image {
-			display: none;
-		}
-		&:nth-child(1) {
-			max-width: none;
-			.case-item__image {
-				display: block;
+			span {
+				position: relative;
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 20px;
+					height: 20px;
+				}
 			}
-			.case-item__title {
-				font-weight: 500;
+			&_prev {
+				span {
+					&::before {
+						left: -20px;
+						background: url("../../img/icons/arrowLeftsvg.svg") center / cover no-repeat;
+					}
+				}
+			}
+			&_next {
+				span {
+					&::after {
+						right: -20px;
+						background: url("../../img/icons/arrowRight.svg") center / cover no-repeat;
+					}
+				}
 			}
 		}
 	}
