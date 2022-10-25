@@ -1,6 +1,8 @@
 .main {
 	padding-top: 60px;
-
+	& {
+		margin-bottom: 0!important;
+	}
 	&__inner {
 		display: flex;
 		flex-direction: column;
@@ -8,6 +10,7 @@
 		justify-content: center;
 		padding-top: 124px;
 		padding-bottom: 63px;
+		position: relative;
 	}
 	.logo {
 		display: flex;
@@ -34,6 +37,8 @@
 		color: #fff;
 		max-width: 795px;
 		margin-bottom: 40px;
+		position: relative;
+		z-index: 1;
 		&_purple {
 			color: var(--main-purple);
 		}
@@ -50,6 +55,8 @@
 		letter-spacing: 0.1px;
 		color: var(--main-white);
 		margin-bottom: 76px;
+		position: relative;
+		z-index: 1;
 	}
 
 	&__list {
@@ -59,6 +66,9 @@
 		max-width: 860px;
 		width: 100%;
 		justify-content: space-between;
+		gap: 30px;
+		position: relative;
+		z-index: 2;
 	}
 
 	&__item {
@@ -75,7 +85,7 @@
 		font-size: 51px;
 		line-height: 60px;
 		letter-spacing: -0.25px;
-		color: #C736EF;//TODO shadow for number
+		color: #c736ef; //TODO shadow for number
 	}
 
 	&__desc {
@@ -84,5 +94,41 @@
 		font-size: 28px;
 		line-height: 36px;
 		color: #f5f5f5;
+	}
+	@media (max-width: 800px) {
+		&__inner {
+			margin-bottom: 96px;
+		}
+		&__title {
+			font-size: 38px;
+			line-height: 50px;
+		}
+		&__number {
+			font-size: 40px;
+			line-height: 40px;
+		}
+		&__desc {
+			font-size: 18px;
+			line-height: 24px;
+		}
+		&__button {
+			padding: 18px 20px;
+			width: 100%;
+			max-width: 250px;
+			margin-bottom: 63px;
+		}
+		&__item {
+			gap: 13px;
+			flex-direction: row;
+		}
+		.logo {
+			display: none;
+		}
+	}
+	@media (max-width: 500px) {
+		padding-top: 53px;
+		&__inner {
+			padding-top: 58px;
+		}
 	}
 }

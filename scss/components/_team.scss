@@ -1,6 +1,7 @@
 .team {
 	margin-bottom: 130px;
 	&__inner {
+		padding-right: 0!important;
 	}
 
 	&__title {
@@ -12,13 +13,74 @@
 
 	&__wrapper {
 		height: 358px;
+		margin-bottom: 70px;
 	}
+	&__navigation {
+		height: 50px;
+		position: relative;
+		max-width: 426px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.team__button_prev,
+		.team__button_next {
+			width: 50px;
+			height: 50px;
+			background-color: #740693;
+			border-radius: 8px;
+			top: 0;
+			margin: 0;
+			&::after {
+				content: "";
+				position: absolute;
+				width: 24px;
+				height: 24px;
+				z-index: 4;
+			}
+		}
+		.team__button_prev {
+			left: 0;
+			&::after {
+				background: url("../../img/icons/arrowLeftsvg.svg") center / cover no-repeat;
+			}
+		}
+		.team__button_next {
+			right: 0;
+			&::after {
+				background: url("../../img/icons/arrowRight.svg") center / cover no-repeat;
+			}
+		}
+		.team__pagination.swiper-pagination {
+			height: 8px;
+			width: calc(100% - 148px);
+			left: 50%;
+			transform: translate(-50%, -50%);
+			bottom: 0;
+			top: 50%;
+			display: flex;
+			justify-content: space-between;
+			gap: 10px;
+			.swiper-pagination-bullet {
+				margin: 0;
+				background: #740693;
+				max-width: 100%;
+				width: 100%;
+				border-radius: 10px;
+				opacity: 1;
+				&-active {
+					background: var(--main-purple);
+				}
+			}
+		}
+	}
+
 	&-member {
 		max-width: 200px;
 		height: 100%;
 		position: relative;
 		&::before {
-			content: '';
+			content: "";
 			background: linear-gradient(180deg, rgba(16, 16, 16, 0.25) 0%, #101010 100%);
 			mix-blend-mode: normal;
 			position: absolute;
@@ -28,8 +90,8 @@
 			top: 0;
 		}
 		&::after {
-			content: '';
-			background: linear-gradient(180deg, #9F27C0 0%, #520766 100%);
+			content: "";
+			background: linear-gradient(180deg, #9f27c0 0%, #520766 100%);
 			mix-blend-mode: color;
 			// opacity: 0.83;
 			position: absolute;
@@ -85,7 +147,7 @@
 				transform: translateY(-50%);
 				width: 19px;
 				height: 20px;
-				background: url('../../img/icons/linkedin.svg') center / cover no-repeat;
+				background: url("../../img/icons/linkedin.svg") center / cover no-repeat;
 			}
 		}
 	}
