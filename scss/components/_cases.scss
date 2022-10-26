@@ -1,6 +1,50 @@
 .cases {
-	margin-bottom: 130px;
 	&__inner {
+		position: relative;
+	}
+
+	&__blink {
+		background: radial-gradient(123.33% 119.24% at 43.19% 99.41%, #38085f 0%, #4c1286 26.04%, #8c0c94 100%);
+		opacity: 0.5;
+		filter: blur(18px);
+		position: absolute;
+		rotate: -75deg;
+		&_1 {
+			border-radius: 124.656px;
+			width: 139.92px;
+			height: 139.92px;
+			border-radius: 124.656px;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+
+		&_2 {
+			width: 267.35px;
+			height: 267.35px;
+			border-radius: 40px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-10%, -100%);
+		}
+
+		&_3 {
+			width: 142.32px;
+			height: 142.32px;
+			border-radius: 40px;
+			top: 0;
+			right: 0;
+			translate: 50% 100%;
+		}
+
+		&_4 {
+			width: 249.31px;
+			height: 249.31px;
+			border-radius: 124.656px;
+			bottom: 0;
+			right: 0;
+			translate: -100% 50%;
+		}
 	}
 
 	&__head {
@@ -32,7 +76,8 @@
 		display: flex;
 		align-items: center;
 		max-width: 420px;
-
+		position: relative;
+		z-index: 2;
 		&__body {
 			padding: 30px;
 			display: flex;
@@ -187,6 +232,10 @@
 		&-item {
 			max-width: 100%;
 			max-height: 100%;
+			&:nth-child(4n + 1) {
+				max-width: 100%;
+				max-height: 100%;
+			}
 			&__body {
 				padding: 20px;
 			}

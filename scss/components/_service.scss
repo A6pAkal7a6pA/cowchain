@@ -75,7 +75,8 @@
 		color: var(--main-white);
 	}
 	@media (max-width: 800px) {
-		margin-bottom: 0px;
+		margin-bottom: 90px;
+		padding-top: 60px;
 		&__content {
 			justify-content: center;
 			gap: 40px 16px;
