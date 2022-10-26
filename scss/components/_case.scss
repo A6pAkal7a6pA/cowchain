@@ -68,8 +68,10 @@
 	&__images {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		margin-bottom: 20px;
+		gap: 26px;
+		flex-wrap: wrap;
 	}
 
 	&__image {
@@ -171,6 +173,51 @@
 						background: url("../../img/icons/arrowRight.svg") center / cover no-repeat;
 					}
 				}
+			}
+		}
+	}
+	@media (max-width: 768px) {
+		&-navigation {
+			&__item {
+				padding: 0;
+				width: 100%;
+			}
+			&__item {
+				background: none;
+			}
+			&__title,
+			&__tags,
+			&__text {
+				display: none;
+			}
+			&__button {
+				width: 100%;
+				border: 2px solid var(--main-purple);
+				background: none;
+				span {
+					&::before,
+					&::after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: 609px) {
+		&-stack {
+			align-items: flex-start;
+			flex-direction: column;
+		}
+		&__subtext,
+		&__text {
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+	@media (max-width: 374px) {
+		&-navigation {
+			&__inner {
+				gap: 10px;
 			}
 		}
 	}
