@@ -93,13 +93,13 @@
 		.review__button_prev {
 			left: 20px;
 			&::after {
-				background: url("../../img/icons/arrowLeftsvg.svg") center / cover no-repeat;
+				background: url("../img/icons/arrowLeftsvg.svg") center / cover no-repeat;
 			}
 		}
 		.review__button_next {
 			right: 20px;
 			&::after {
-				background: url("../../img/icons/arrowRight.svg") center / cover no-repeat;
+				background: url("../img/icons/arrowRight.svg") center / cover no-repeat;
 			}
 		}
 		.review__pagination.swiper-pagination {

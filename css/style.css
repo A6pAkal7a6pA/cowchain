@@ -1554,7 +1554,7 @@ a {
   right: -21px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background: url("../../img/icons/arrow-right.svg") center/cover no-repeat;
+  background: url("../img/icons/arrow-right.svg") center/cover no-repeat;
 }
 
 .case__wrapper {
@@ -1766,12 +1766,12 @@ a {
 
 .case-navigation__button_prev span::before {
   left: -20px;
-  background: url("../../img/icons/arrowLeftsvg.svg") center/cover no-repeat;
+  background: url("../img/icons/arrowLeftsvg.svg") center/cover no-repeat;
 }
 
 .case-navigation__button_next span::after {
   right: -20px;
-  background: url("../../img/icons/arrowRight.svg") center/cover no-repeat;
+  background: url("../img/icons/arrowRight.svg") center/cover no-repeat;
 }
 
 @media (max-width: 768px) {
@@ -2040,7 +2040,7 @@ a {
 }
 
 .team__navigation .team__button_prev::after {
-  background: url("../../img/icons/arrowLeftsvg.svg") center/cover no-repeat;
+  background: url("../img/icons/arrowLeftsvg.svg") center/cover no-repeat;
 }
 
 .team__navigation .team__button_next {
@@ -2048,7 +2048,7 @@ a {
 }
 
 .team__navigation .team__button_next::after {
-  background: url("../../img/icons/arrowRight.svg") center/cover no-repeat;
+  background: url("../img/icons/arrowRight.svg") center/cover no-repeat;
 }
 
 .team__navigation .team__pagination.swiper-pagination {
@@ -2173,7 +2173,7 @@ a {
           transform: translateY(-50%);
   width: 19px;
   height: 20px;
-  background: url("../../img/icons/linkedin.svg") center/cover no-repeat;
+  background: url("../img/icons/linkedin.svg") center/cover no-repeat;
 }
 
 .review {
@@ -2297,7 +2297,7 @@ a {
 }
 
 .review__navigation .review__button_prev::after {
-  background: url("../../img/icons/arrowLeftsvg.svg") center/cover no-repeat;
+  background: url("../img/icons/arrowLeftsvg.svg") center/cover no-repeat;
 }
 
 .review__navigation .review__button_next {
@@ -2305,7 +2305,7 @@ a {
 }
 
 .review__navigation .review__button_next::after {
-  background: url("../../img/icons/arrowRight.svg") center/cover no-repeat;
+  background: url("../img/icons/arrowRight.svg") center/cover no-repeat;
 }
 
 .review__navigation .review__pagination.swiper-pagination {
@@ -2696,9 +2696,9 @@ section {
 
 .main-wrapper {
   position: relative;
-  background: url("../../img/main_bg.svg") top/cover no-repeat;
+  background: url("../img/main_bg.svg") top/cover no-repeat;
 }
 
 .case-wrapper {
-  background: url("../../img/case-wrapper.svg") bottom/cover no-repeat;
+  background: url("../img/case-wrapper.svg") bottom/cover no-repeat;
 }
