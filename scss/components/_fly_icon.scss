@@ -113,7 +113,7 @@
 		}
 	}
 	&_cowchain1 {
-		left: -25%;
+		left: -17%;
 		top: 2%;
 		translate: 50% 0;
 		.fly-icon__image {
@@ -129,7 +129,7 @@
 	}
 
 	&_cowchain2 {
-		right: -15%;
+		right: -12%;
 		bottom: -10%;
 		translate: 0;
 		.fly-icon__image {
@@ -157,7 +157,14 @@
 			min-width: 100px;
 		}
 		&::after {
-			display: none;
+			width: 156.43px;
+			height: 156.43px;
+			border-radius: 48px;
+			transform: rotate(-135deg);
+			left: -20%;
+			top: 45%;
+			background: radial-gradient(123.33% 119.24% at 43.19% 99.41%, #8012d7 0%, #761bd1 26.04%, #d92de4 100%);
+			border-radius: 48px;
 		}
 	}
 
@@ -286,10 +293,38 @@
 	}
 
 	50% {
-		transform: translateY(-10px);
+		transform: translateY(-20px);
 	}
 
 	100% {
 		transform: translateY(20px);
+	}
+}
+
+@keyframes flyIconAnimationUp {
+	0% {
+		translate: 0 20px;
+	}
+
+	50% {
+		translate: 0 -20px;
+	}
+
+	100% {
+		translate: 0 20px;
+	}
+}
+
+@keyframes flyIconAnimationReverse {
+	0% {
+		translate: 0 -20px;
+	}
+
+	50% {
+		translate: 0 20px;
+	}
+
+	100% {
+		translate: 0 -20px;
 	}
 }

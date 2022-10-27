@@ -25,6 +25,7 @@
 			top: 50%;
 			transform: translateY(-50%);
 			left: 0;
+			animation: 5s flyIconAnimationReverse infinite ease-in-out;
 		}
 
 		&_2 {
@@ -34,6 +35,7 @@
 			top: 15%;
 			right: 0;
 			translate: 50% 0;
+			animation: 5s flyIconAnimationReverse infinite ease-in-out;
 		}
 
 		&_3 {
@@ -41,9 +43,10 @@
 			height: 249.31px;
 			border-radius: 124.656px;
 			transform: rotate(-75deg);
-			bottom: -20%;
+			bottom: -12%;
 			left: 50%;
-			translate: 70%;
+			transform: translateY(70%);
+			animation: 5s flyIconAnimationUp infinite ease-in-out;
 		}
 	}
 
@@ -76,6 +79,9 @@
 				width: 24px;
 				height: 24px;
 				z-index: 4;
+			}
+			&:hover {
+				background: var(--main-purple);
 			}
 		}
 		.team__button_prev {

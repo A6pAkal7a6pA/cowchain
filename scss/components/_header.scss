@@ -122,6 +122,71 @@
 		&__text {
 		}
 	}
+	.request {
+		display: none;
+		position: fixed;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		height: 100%;
+		background: rgba(#101010, 0.6);
+		align-items: center;
+		justify-content: center;
+		&_active {
+			display: flex;
+		}
+		&__inner {
+			height: 188px;
+			background: #740693;
+			border-radius: 18px;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			padding: 24px 16px;
+			width: 100%;
+		}
+
+		&__title {
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 24px;
+			color: var(--main-white);
+			margin-bottom: 20px;
+		}
+
+		&__img {
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			right: 16px;
+			top: 24px;
+		}
+
+		&__input {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 20px;
+			letter-spacing: 0.1px;
+			color: #101010;
+			padding: 13px 15px;
+			background: #f3f3f3;
+			border-radius: 8px;
+			margin-bottom: 12px;
+		}
+
+		&__button {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 20px;
+			letter-spacing: 0.1px;
+			padding: 13px 16px;
+			color: var(--main-white);
+			background: var(--main-purple);
+			border-radius: 8px;
+		}
+	}
+
 	@media (max-width: 800px) {
 		&__main {
 			display: flex;

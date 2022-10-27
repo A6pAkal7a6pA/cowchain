@@ -55,6 +55,9 @@
 		margin-bottom: 76px;
 		position: relative;
 		z-index: 1;
+		&:hover {
+			background: var(--main-purple);
+		}
 	}
 
 	&__list {

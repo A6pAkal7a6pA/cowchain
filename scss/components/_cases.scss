@@ -9,6 +9,7 @@
 		filter: blur(18px);
 		position: absolute;
 		rotate: -75deg;
+		z-index: -1;
 		&_1 {
 			border-radius: 124.656px;
 			width: 139.92px;
@@ -17,6 +18,7 @@
 			top: 50%;
 			left: 0;
 			transform: translateY(-50%);
+			animation: 5s flyIconAnimationUp infinite ease-in-out;
 		}
 
 		&_2 {
@@ -26,6 +28,7 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-10%, -100%);
+			animation: 5s flyIconAnimationReverse infinite ease-in-out;
 		}
 
 		&_3 {
@@ -35,6 +38,7 @@
 			top: 0;
 			right: 0;
 			translate: 50% 100%;
+			animation: 5s flyIconAnimationUp infinite ease-in-out;
 		}
 
 		&_4 {
@@ -44,6 +48,7 @@
 			bottom: 0;
 			right: 0;
 			translate: -100% 50%;
+			animation: 5s flyIconAnimationReverse infinite ease-in-out;
 		}
 	}
 
@@ -64,6 +69,9 @@
 		font-size: 32px;
 		line-height: 40px;
 		color: var(--main-purple);
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&__content {
@@ -78,6 +86,7 @@
 		max-width: 420px;
 		position: relative;
 		z-index: 2;
+		flex-direction: column-reverse;
 		&__body {
 			padding: 30px;
 			display: flex;
@@ -139,11 +148,15 @@
 			color: var(--main-white);
 			width: auto;
 			max-width: 200px;
+			text-align: center;
 			border: 3px solid var(--main-purple);
+			&:hover {
+				border: 3px solid transparent;
+				background: linear-gradient(264.17deg, #7c06d8 1.95%, #9c07c6 101.96%);
+			}
 		}
 
 		&__image {
-			display: none;
 			max-width: 100%;
 			width: 100%;
 			height: 186px;
@@ -158,6 +171,7 @@
 			max-width: none;
 			flex-shrink: 1;
 			max-height: 318px;
+			flex-direction: row;
 			.cases-item__image {
 				display: block;
 				height: 100%;
@@ -172,7 +186,7 @@
 	}
 	@media (max-width: 1339px) {
 		&-item {
-			flex-direction: column-reverse;
+
 			max-width: calc(50% - 10px);
 			&__image {
 				max-height: 100%;
@@ -184,6 +198,7 @@
 			&:nth-child(4n + 1) {
 				flex-direction: column-reverse;
 				max-width: calc(50% - 10px);
+				max-height: 100%;
 				.cases-item__image {
 					height: 186px;
 				}

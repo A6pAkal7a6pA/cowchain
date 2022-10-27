@@ -59,14 +59,14 @@ const reviwSlider = new Swiper('.review__slider', {
 
 let header = document.querySelector('.header');
 let headerBurger = document.querySelector('.header__burger');
-let headerActive = 'header_active';
+const HEADER_ACTIVE = 'header_active';
 
 headerBurger.addEventListener('click', () => {
-	if (header.classList.contains(headerActive)) {
-		header.classList.remove(headerActive);
+	if (header.classList.contains(HEADER_ACTIVE)) {
+		header.classList.remove(HEADER_ACTIVE);
 		document.documentElement.style.overflow = 'visible';
 	} else {
-		header.classList.add(headerActive);
+		header.classList.add(HEADER_ACTIVE);
 		document.documentElement.style.overflow = 'hidden';
 	}
 });
@@ -84,3 +84,17 @@ for (let anchor of anchors) {
 		})
 	})
 }
+
+let request = document.querySelector('.request');
+const REQUEST_ACTIVE = 'request_active';
+
+document.getElementById('request').addEventListener('click', () => {
+	header.classList.remove(headerActive);
+	request.classList.add(REQUEST_ACTIVE);
+	document.querySelector('.request__input').focus();
+})
+
+document.querySelector('.request__img').addEventListener('click', () => {
+	document.documentElement.style.overflow = 'visible';
+	request.classList.remove(REQUEST_ACTIVE);
+})

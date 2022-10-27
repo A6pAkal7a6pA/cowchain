@@ -14,7 +14,7 @@
 	&__wrapper.swiper-wrapper {
 		margin-bottom: 50px;
 		// height: 440px!important;
-		align-items: center!important;
+		align-items: center !important;
 	}
 
 	&__item {
@@ -22,7 +22,6 @@
 		border-radius: 10px;
 		max-width: 380px;
 		width: 100%;
-		height: auto;
 		padding: 50px;
 		display: flex;
 		justify-content: space-between;
@@ -31,7 +30,7 @@
 
 	&__text {
 		font-weight: 500;
-		font-size: 25px;
+		font-size: 22px;
 		line-height: 32px;
 		letter-spacing: 0.4px;
 		color: var(--main-white);
@@ -43,7 +42,8 @@
 	.swiper-slide-active {
 		max-width: 530px;
 		.review__text {
-			height: 100%;
+			font-size: 25px;
+			height: auto;
 			text-overflow: clip;
 			overflow: visible;
 		}
@@ -64,7 +64,9 @@
 	&__navigation {
 		height: 50px;
 		position: relative;
-		max-width: 426px;
+		max-width: 466px;
+		width: 100%;
+		padding: 0 20px;
 		margin: 0 auto;
 		display: flex;
 		justify-content: center;
@@ -84,22 +86,25 @@
 				height: 24px;
 				z-index: 4;
 			}
+			&:hover {
+				background: var(--main-purple);
+			}
 		}
 		.review__button_prev {
-			left: 0;
+			left: 20px;
 			&::after {
 				background: url("../../img/icons/arrowLeftsvg.svg") center / cover no-repeat;
 			}
 		}
 		.review__button_next {
-			right: 0;
+			right: 20px;
 			&::after {
 				background: url("../../img/icons/arrowRight.svg") center / cover no-repeat;
 			}
 		}
 		.review__pagination.swiper-pagination {
 			height: 8px;
-			width: calc(100% - 148px);
+			width: calc(100% - 188px);
 			left: 50%;
 			transform: translate(-50%, -50%);
 			bottom: 0;
@@ -122,7 +127,16 @@
 	}
 	@media (max-width: 800px) {
 		&__slider {
-			z-index: 2!important;
+			z-index: 2 !important;
+		}
+	}
+	@media (max-width: 570px) {
+		&__inner {
+			padding: 0 !important;
+		}
+		&__slider {
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 	}
 }
