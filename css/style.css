@@ -1746,6 +1746,10 @@ a {
   padding: 13px 16px;
 }
 
+.case-navigation__button:hover {
+  background: var(--main-purple);
+}
+
 .case-navigation__button span {
   position: relative;
 }
