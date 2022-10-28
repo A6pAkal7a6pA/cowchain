@@ -76,7 +76,8 @@ for (let anchor of anchors) {
 	anchor.addEventListener('click', function (e) {
 		e.preventDefault()
 		const blockID = anchor.getAttribute('href').substr(1)
-
+		header.classList.remove(HEADER_ACTIVE);
+		document.documentElement.style.overflow = 'visible';
 		document.getElementById(blockID).scrollIntoView({
 			behavior: 'smooth',
 			block: 'start',
@@ -98,3 +99,12 @@ document.querySelector('.request__img').addEventListener('click', () => {
 	document.documentElement.style.overflow = 'visible';
 	request.classList.remove(REQUEST_ACTIVE);
 })
+
+
+document.querySelectorAll('.contact__img_copy').forEach(el => {
+	el.addEventListener('click', () => {
+		let email = el.previousElementSibling;
+		email.parentElement.classList.add('contact__item_copied');
+		navigator.clipboard.writeText(email.innerText);
+	})
+});

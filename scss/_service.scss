@@ -1,7 +1,6 @@
 .service {
 	padding-top: 100px;
 	background: linear-gradient(180deg, rgba(68, 7, 85, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
-	margin-bottom: 130px;
 	&__inner {
 		position: relative;
 	}
@@ -73,9 +72,10 @@
 		font-size: 22px;
 		line-height: 28px;
 		color: var(--main-white);
+		position: relative;
+		z-index: 2;
 	}
 	@media (max-width: 800px) {
-		margin-bottom: 90px;
 		padding-top: 60px;
 		&__content {
 			justify-content: center;

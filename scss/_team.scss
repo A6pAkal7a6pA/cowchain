@@ -1,5 +1,5 @@
 .team {
-	margin-bottom: 130px;
+	padding-top: 130px;
 	&__inner {
 		padding: 0 !important;
 		position: relative;
@@ -195,5 +195,8 @@
 				background: url("../img/icons/linkedin.svg") center / cover no-repeat;
 			}
 		}
+	}
+	@media (max-width: 768px) {
+		padding-top: 90px;
 	}
 }

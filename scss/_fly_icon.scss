@@ -126,6 +126,9 @@
 		&::after {
 			display: none;
 		}
+		@media(max-width: 768px) {
+			display: none;
+		}
 	}
 
 	&_cowchain2 {
@@ -142,13 +145,16 @@
 		&::after {
 			display: none;
 		}
+		@media(max-width: 768px) {
+			display: none;
+		}
 	}
 
 	&_cowchain3 {
 		left: 0;
 		top: 2%;
 		translate: 0;
-		z-index: 2;
+		z-index: 1;
 		.fly-icon__image {
 			transform: rotate(-30deg);
 			border-radius: 100%;

@@ -98,16 +98,7 @@
 			margin-bottom: 30px;
 		}
 
-		&__item {
-			font-weight: 500;
-			font-size: 18px;
-			line-height: 24px;
-			letter-spacing: 0.5px;
-			color: #ffffff;
-			display: flex;
-			gap: 5px;
-			align-items: center;
-		}
+	
 
 		&__img {
 			&_letter {
@@ -118,11 +109,32 @@
 				opacity: 0.5;
 			}
 
+			&_copied {
+				display: none;
+			}
 			&_chat {
 			}
 		}
 
 		&__text {
+		}
+		&__item {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 24px;
+			letter-spacing: 0.5px;
+			color: #ffffff;
+			display: flex;
+			gap: 5px;
+			align-items: center;
+			&_copied {
+				.contact__img_copy {
+					display: none;
+				}
+				.contact__img_copied {
+					display: block;
+				}
+			}
 		}
 		&-form {
 			display: flex;
