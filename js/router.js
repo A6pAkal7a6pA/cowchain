@@ -22,7 +22,7 @@ const handleLocation = async () => {
 	let path = window.location.pathname.replace('/cowchain', '');
 	const route = routes[path];
 	if (route !== undefined) {
-		const html = await fetch(window.location.origin + '/cowchain' + route).then(data => data.text());
+		const html = await fetch(window.location.origin + '/cowchain/' + route).then(data => data.text());
 		document.getElementById('root').innerHTML = html;
 	}
 }
