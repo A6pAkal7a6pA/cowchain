@@ -1,4 +1,4 @@
-const route = event => {
+const route = (event) => {
 	event = event || window.event;
 	event.preventDefault();
 	window.history.pushState({}, "", event.target.href);
@@ -6,15 +6,23 @@ const route = event => {
 }
 
 const routes = {
-	"/": "index.html",
-	"/cases": "cases.html"
+	"/": "main.html",
+	"/cases": "cases.html",
+	"/cases/1": "1.html",
+	"/cases/2": "2.html",
+	"/cases/3": "3.html",
+	"/cases/4": "4.html",
+	"/cases/5": "5.html",
+	"/cases/6": "6.html",
+	"/cases/7": "7.html",
+	"/cases/8": "8.html"
 }
 
 const handleLocation = async () => {
 	const path = window.location.pathname;
 	const route = routes[path];
 	const html = await fetch(route).then(data => data.text());
-	document.getElementById('content').innerHTML = html;
+	document.getElementById('root').innerHTML = html;
 }
 window.onpopstate = handleLocation;
 window.route = route;

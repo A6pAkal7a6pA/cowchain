@@ -1,3 +1,4 @@
+
 const teamSlider = new Swiper('.team__slider', {
 	loop: true,
 	// autoplay: {
@@ -76,6 +77,7 @@ for (let anchor of anchors) {
 	anchor.addEventListener('click', function (e) {
 		e.preventDefault()
 		const blockID = anchor.getAttribute('href').substr(1)
+		console.log(blockID);
 		header.classList.remove(HEADER_ACTIVE);
 		document.documentElement.style.overflow = 'visible';
 		document.getElementById(blockID).scrollIntoView({
@@ -90,7 +92,7 @@ let request = document.querySelector('.request');
 const REQUEST_ACTIVE = 'request_active';
 
 document.getElementById('request').addEventListener('click', () => {
-	header.classList.remove(headerActive);
+	header.classList.remove(HEADER_ACTIVE);
 	request.classList.add(REQUEST_ACTIVE);
 	document.querySelector('.request__input').focus();
 })

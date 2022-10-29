@@ -1,5 +1,6 @@
 .service {
 	padding-top: 100px;
+	margin-bottom: 130px;
 	background: linear-gradient(180deg, rgba(68, 7, 85, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
 	&__inner {
 		position: relative;
@@ -77,6 +78,7 @@
 	}
 	@media (max-width: 800px) {
 		padding-top: 60px;
+		margin-bottom: 90px;
 		&__content {
 			justify-content: center;
 			gap: 40px 16px;

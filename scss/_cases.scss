@@ -1,5 +1,4 @@
 .cases {
-	padding-top: 130px;
 	&__inner {
 		position: relative;
 	}
@@ -242,7 +241,6 @@
 		}
 	}
 	@media (max-width: 768px) {
-		padding-top: 90px;
 		&__show {
 			font-size: 24px;
 		}
