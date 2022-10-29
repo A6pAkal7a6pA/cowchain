@@ -7,6 +7,7 @@ const route = (event) => {
 }
 
 const routes = {
+	"/": "main.html",
 	"/cases": "cases.html",
 	"/cases/1": "1.html",
 	"/cases/2": "2.html",
@@ -18,8 +19,7 @@ const routes = {
 	"/cases/8": "8.html"
 }
 const handleLocation = async () => {
-	let path = window.location.pathname.replace('/cowchain', '');
-	console.log(path);
+	let path = window.location.pathname;
 	const route = routes[path];
 	if (route !== undefined) {
 		const html = await fetch(route).then(data => data.text());
@@ -29,4 +29,4 @@ const handleLocation = async () => {
 window.onpopstate = handleLocation;
 window.route = route;
 
-handleLocation();
+// handleLocation();
