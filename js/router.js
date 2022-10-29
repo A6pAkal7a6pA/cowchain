@@ -1,10 +1,8 @@
 const route = (event) => {
 	event = event || window.event;
 	event.preventDefault();
-	let href = event.target.href;
-	let path = href.replace(window.location.origin, '');
-	alert(window.location.origin +  window.location.pathname + path)
-	window.history.pushState({}, "",window.location.origin +  window.location.pathname + path);
+	alert(event.target.href)
+	window.history.pushState({}, "", event.target.href);
 	handleLocation();
 }
 
