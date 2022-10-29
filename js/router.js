@@ -1,7 +1,6 @@
 const route = (event) => {
 	event = event || window.event;
 	event.preventDefault();
-	alert(event.target.href)
 	window.history.pushState({}, "", event.target.href);
 	handleLocation();
 }
