@@ -19,10 +19,12 @@ const routes = {
 
 const handleLocation = async () => {
 	const path = window.location.pathname;
-	const route = routes[path];
+	if ('/' !== path) {
+		const route = routes[path];
+		const html = await fetch(route).then(data => data.text());
+		document.getElementById('root').innerHTML = html;
+	}
 
-	const html = await fetch(route).then(data => data.text());
-	document.getElementById('root').innerHTML = html;
 }
 window.onpopstate = handleLocation;
 window.route = route;
