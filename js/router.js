@@ -17,7 +17,8 @@ const routes = {
 	"/cases/8": "8.html"
 }
 const handleLocation = async () => {
-	let path = window.location.pathname;
+	alert(window.location.origin)
+	let path = window.location.href.replace(window.location.origin, '');
 	let routePath = path.substring(path.indexOf('/'));
 	alert('routePath: ' + routePath)
 	path = path.substring(0, path.indexOf('/'))
