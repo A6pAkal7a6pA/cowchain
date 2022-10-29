@@ -6,7 +6,7 @@ const route = (event) => {
 }
 
 const routes = {
-	// "/": "main.html",
+	"/": "index.html",
 	"/cases": "cases.html",
 	"/cases/1": "1.html",
 	"/cases/2": "2.html",
@@ -21,6 +21,7 @@ const routes = {
 const handleLocation = async () => {
 	const path = window.location.pathname;
 	const route = routes[path];
+
 	const html = await fetch(route).then(data => data.text());
 	document.getElementById('root').innerHTML = html;
 }
