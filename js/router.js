@@ -19,6 +19,7 @@ const routes = {
 const handleLocation = async () => {
 	alert(window.location.origin)
 	let path = window.location.href.replace(window.location.origin, '');
+	alert(path)
 	let routePath = path.substring(path.indexOf('/'));
 	alert('routePath: ' + routePath)
 	path = path.substring(0, path.indexOf('/'))
