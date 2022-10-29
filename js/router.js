@@ -6,7 +6,6 @@ const route = (event) => {
 }
 
 const routes = {
-	"/": "index.html",
 	"/cases": "cases.html",
 	"/cases/1": "1.html",
 	"/cases/2": "2.html",
