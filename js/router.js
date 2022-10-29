@@ -1,6 +1,7 @@
 const route = (event) => {
 	event = event || window.event;
 	event.preventDefault();
+	alert(window.location.href.replace(window.location.origin + '/', ''))
 	window.history.pushState({}, "", window.location.href.replace(window.location.origin + '/', '') + event.target.href);
 	handleLocation();
 }
@@ -19,7 +20,6 @@ const routes = {
 const handleLocation = async () => {
 	let path = window.location.href.replace(window.location.origin + '/', '');
 	let routePath = path.substring(path.indexOf('/'));
-	alert(routePath)
 	const route = routes[routePath];
 	if (route !== undefined) {
 		const html = await fetch(route).then(data => data.text());
