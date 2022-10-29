@@ -16,10 +16,11 @@ const routes = {
 	"/cases/7": "7.html",
 	"/cases/8": "8.html"
 }
-
 const handleLocation = async () => {
-	const path = window.location.pathname;
+	let path = window.location.pathname;
+	path = path.substring(path.indexOf('/'))
 	const route = routes[path];
+
 	if (route !== undefined) {
 		const html = await fetch(route).then(data => data.text());
 		document.getElementById('root').innerHTML = html;
