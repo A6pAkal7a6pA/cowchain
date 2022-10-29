@@ -18,9 +18,12 @@ const routes = {
 }
 const handleLocation = async () => {
 	let path = window.location.pathname;
-	path = path.substring(path.indexOf('/'))
-	const route = routes[path];
-
+	let routePath = path.substring(path.indexOf('/'));
+	alert('routePath: ' + routePath)
+	path = path.substring(0, path.indexOf('/'))
+	alert('path: ' + path)
+	const route = routes[routePath];
+	alert(path + route)
 	if (route !== undefined) {
 		const html = await fetch(route).then(data => data.text());
 		document.getElementById('root').innerHTML = html;
